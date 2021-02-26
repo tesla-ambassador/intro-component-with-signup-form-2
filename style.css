@@ -1,0 +1,190 @@
+:root {
+    /* primary */
+    --Red: hsl(0, 100%, 74%); 
+--Green: hsl(154, 59%, 51%);
+    /* accent */
+--Blue: hsl(248, 32%, 49%);
+    /* neutral */
+--DarkBlue: hsl(249, 10%, 26%); 
+--GrayishBlue: hsl(246, 25%, 77%);
+}
+
+
+body {
+    background-image: url('./images/bg-intro-desktop.png');
+    background-repeat: none;
+    background-size: cover;
+    background-color: hsl(0, 100%, 74%);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    /* top-section */
+.intro {
+    color: white;
+    width: 35%;
+    margin-top: 10%;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+ /* grid properties */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2 1fr);
+    width: 35%;
+    text-align: center;
+    grid-gap: 20px;
+    overflow: hidden;
+    margin-top: 10%;
+}
+
+.price {
+    background-color: hsl(248, 32%, 49%);
+    text-align: center;
+    border-radius: 10px;
+    color:#ffff;
+    box-shadow: 5px 10px rgba(0,0,0,0.15);
+}
+
+    /* form */
+.form-container {
+    background-color: #ffff;
+    border-radius: 10px;
+    /* box-shadow: 1px 1px 5px 3px 1px 1px black; */
+}
+
+#my-form {
+    padding: 15px;
+}
+
+.form-category {
+    padding: 5px;
+    text-align: center;
+    position:relative;
+}
+
+.form-category input {
+    width: 90%;
+    padding: 15px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px hsl(246, 25%, 77%) solid;
+}
+.form-category input:focus {
+    border: 1px black solid;
+}
+.form-category input:focus:valid {
+    border-color: green;
+}
+.form-category input:focus:invalid {
+    border-color: red;
+}
+.form-category input:focus:invalid + .close-icon {
+    opacity: 1;
+}
+
+.form-category input:focus:valid + .close-icon + .select-icon {
+    opacity: 1;
+}
+
+.close-icon {
+    position:absolute;
+    right: 20px;
+    top: 13px;
+    opacity:0;
+}
+
+.select-icon {
+    position:absolute;
+    right: 20px;
+    top: 13px;
+    opacity:0;
+}
+
+label {
+    position: absolute;
+    left:-10000px;
+    top:auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+    /* button */
+#button {
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    width: 95%;
+}
+
+#button:focus {
+    border: none;
+}
+
+#button:hover {
+    opacity: 1;
+}
+
+/* bottom-text */
+.bottom-text {
+    margin-top: -5px;
+    color: hsl(246, 25%, 77%);
+    font-size: smaller;
+    padding-bottom: 10px;
+}
+#Terms-Services {
+    color:hsl(0, 100%, 74%);
+}
+
+    /* attribution */
+.attribution {
+    text-align: center;
+    margin-top:5%;
+}    
+
+@media screen and (max-width: 500px) {
+    .main-container {
+        flex-direction: column;
+    }
+    
+    .intro {
+        width: 70%;
+    }
+
+    .container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .main-container {
+        flex-direction: column;
+    }
+    
+    .intro {
+        width: 95%;
+        text-align: center;
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 2rem;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
